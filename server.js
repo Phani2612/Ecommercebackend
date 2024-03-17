@@ -28,9 +28,9 @@ const JWT = require('jsonwebtoken')
 
 App.use(Cookieparser())
 
-// App.set('view engine', 'ejs');
+app.set('views', './views');
 
-App.set('views', path.join(__dirname, 'views'));
+App.set('view engine', 'ejs');
 
 App.use(Express.urlencoded())
 
@@ -898,7 +898,7 @@ App.patch('/decrease/:id' , async function(req,res)
 
 App.get('/debit' , function(req,res)
 {
-    res.render("debit.ejs" , {Publish : Publishkey})
+    res.render("debit" , {Publish : Publishkey})
 })
 
 
