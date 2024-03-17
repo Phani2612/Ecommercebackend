@@ -28,13 +28,13 @@ App.use(Cookieparser())
 App.set('view engine', 'ejs');
 
 App.use(Express.urlencoded())
-
-// App.use(CORS({
-//     origin: 'https://frontend-6lrd.onrender.com', // Allow requests from this origin
-//     credentials: true,
-// }))
-
 App.use(CORS())
+App.use(CORS({
+    origin: 'https://frontend-6lrd.onrender.com', // Allow requests from this origin
+    credentials: true,
+}))
+
+
 
 App.use(Express.json())
 
