@@ -30,7 +30,7 @@ App.use(Cookieparser())
 App.use(Express.urlencoded())
 
 App.use(CORS({
-    origin: 'http://localhost:3000', // Allow requests from this origin
+    origin: 'https://frontend-6lrd.onrender.com', // Allow requests from this origin
     credentials: true,
 }))
 
@@ -889,7 +889,7 @@ App.patch('/decrease/:id' , async function(req,res)
 })
 
 
-App.get('/debit' , Verifytoken , function(req,res)
+App.get('/debit' , function(req,res)
 {
     res.render("debit.ejs" , {Publish : Publishkey})
 })
@@ -956,7 +956,7 @@ App.delete('/deladdress' ,async function(req,res)
 })
 
 
-App.get('/info' , Verifytoken  , async function(req,res)
+App.get('/info'   , async function(req,res)
 {   
  
   
@@ -1088,7 +1088,7 @@ App.post('/payment'  , async function(req,res)
         })
     }).then(function()
     {
-        res.redirect("http://localhost:3000/success")
+        res.redirect("https://frontend-6lrd.onrender.com/success")
     }).catch(function()
     {
         res.send('<h3>Payment not successfull</h3>')
