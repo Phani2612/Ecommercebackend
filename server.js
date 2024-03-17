@@ -898,7 +898,7 @@ App.patch('/decrease/:id' , async function(req,res)
 
 App.get('/debit' , function(req,res)
 {
-    res.render("debit" , {Publish : Publishkey})
+    res.render("debit.ejs" , {Publish : Publishkey})
 })
 
 
