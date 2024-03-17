@@ -25,7 +25,7 @@ const JWT = require('jsonwebtoken')
 
 App.use(Cookieparser())
 
-
+App.set('view engine', 'ejs');
 
 App.use(Express.urlencoded())
 
