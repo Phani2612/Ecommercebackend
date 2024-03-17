@@ -28,7 +28,7 @@ const JWT = require('jsonwebtoken')
 
 App.use(Cookieparser())
 
-App.set('views', './views');
+App.set('Views', './Views');
 
 App.set('view engine', 'ejs');
 
