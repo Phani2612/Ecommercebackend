@@ -578,7 +578,7 @@ App.post('/contact' , async function(req,res)
 
 
 
-App.get('/getproduct'  , Verifytoken ,  async function(req,res)
+App.get('/getproduct'   ,  async function(req,res)
 {
        
     
